@@ -1,0 +1,65 @@
+label{
+font-family:times new roman;
+color: rgb(5, 5, 5);
+
+
+
+}
+input{
+border-radius:10px;
+background:rgb(250, 247, 247);
+margin-left:25px;
+}
+
+.topo{
+color:white;
+font-family:arial;
+background-color: rgba(10, 0, 0, 0.1);;
+padding:15px;
+border-radius: 10px;
+border:2px dashed black;
+text-align:center;
+background: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTF4a9FC78XPzmD3jeNHtYVon4M_NLRLuwtvA&usqp=CAU);
+
+}
+
+.lista{
+padding:10px;
+
+
+}
+
+.link{
+margin:auto;
+justify-content:center;
+display:flex;
+border:2px solid black;
+border-radius:10px;
+color: Black;
+}
+
+.nulo{
+opacity:0;
+}
+
+.buttom{
+color:black;
+background:rgba(10, 0, 0, 0.1);
+margin-left:90px;
+
+}
+
+.deppis{
+text-align:center;
+}
+
+body{
+background: url("https://cdn.pixabay.com/photo/2015/07/17/22/43/student-849825_640.jpg");
+background-size: 400px 700px;
+position:absolute;
+		left:40%;
+		top:25%;
+		margin-left:-100px;
+		margin-top:-30px;
+    
+}
