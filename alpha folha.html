@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <META HTTP-EQUIV="CACHE-CONTROL" CONTENT="NO-CACHE">
+    <META HTTP-EQUIV="EXPIRES" CONTENT="Mon, 22 Jul 2023 11:12:01 GMT">
+    <link rel="stylesheet" type="text/css" href="estilo.css" />
+</head>
+
+<body>
+    <h1 id="title"> Calculadora de aliquota de iss</h1>
+    <form action="" onsubmit="return false">
+        <div>
+            <label for="faturamento12meses">Qual foi o seu faturamento nos ultimos 12 meses:</label>
+            <input type="number" id="faturamento12meses">
+        </div>
+        <div>
+            <label for="anexosimples">Qual o seu anexo no simples nacional:</label>
+            <input type="number" id="anexosimples">
+        </div>
+        <div>
+            <label for="fatorR"> Qual seu gasto com folha nos ultimos 12 meses:</label>
+            <input type="number" id="fatorR">
+        </div>
+        <button type="button" onclick="calcular()">Calcular </button>
+    </form>
+    <div>
+        <label for="formatado" id="formatado"> </label>
+    </div>
+    <script>
+        //faixas do simples
+        const faixa1 = 180000
+        const faixa2 = 360000
+        const faixa3 = 720000
+        const faixa4 = 1800000
+        const faixa5 = 3600000
+        const faixa6 = 4800000
+
+        function calcular() {
+            // VARIAVEIS QUE RECEBEM VALORES
+            let faturamento12mesestex = document.getElementById("faturamento12meses").value
+            let faturamento12meses = parseFloat(faturamento12mesestex)
+            let anexosimplestex = document.getElementById("anexosimples").value
+            let anexosimples = parseFloat(anexosimplestex)
+            let fatorRtex = document.getElementById("fatorR").value
+            let fatorR = parseFloat(fatorRtex)
+            let AliquotaEfetivatex = 0
+            let AliquotaEfetiva = parseFloat(AliquotaEfetivatex)
+
+            if (anexosimples == 3 && faturamento12meses <= faixa1) {
+                AliquotaEfetiva = ((((faturamento12meses * 0.06) - 0) / faturamento12meses))
+            }
+            else if (anexosimples == 3 && faturamento12meses > faixa1 && faturamento12meses < faixa2) {
+                AliquotaEfetiva = ((((faturamento12meses * 0.120) - 9360) / faturamento12meses))
+            } else if (anexosimples == 3 && faturamento12meses > faixa2 && faturamento12meses < faixa3) {
+                AliquotaEfetiva = (((faturamento12meses * 0.135) - 17640) / faturamento12meses)
+            } else if (anexosimples == 3 && faturamento12meses > faixa3 && faturamento12meses < faixa4) {
+                AliquotaEfetiva = (((faturamento12meses * 0.160) - 35640) / faturamento12meses)
+            } else if (anexosimples == 3 && faturamento12meses > faixa4 && faturamento12meses < faixa5) {
+                AliquotaEfetiva = (((faturamento12meses * 0.210) - 125640) / faturamento12meses)
+            } else if (anexosimples == 3 && faturamento12meses > faixa5 && faturamento12meses < faixa6) {
+                (AliquotaEfetiva = "isento de iss")
+            } else if (anexosimples == 4 && faturamento12meses <= faixa1) {
+                AliquotaEfetiva = (((faturamento12meses * 0.045) - 0) / faturamento12meses)
+            } else if (anexosimples == 4 && faturamento12meses > faixa1 && faturamento12meses < faixa2) {
+                AliquotaEfetiva = (((faturamento12meses * 0.09) - 8100) / faturamento12meses)
+            } else if (anexosimples == 4 && faturamento12meses > faixa2 && faturamento12meses < faixa3) {
+                AliquotaEfetiva = (((faturamento12meses * 0.102) - 12420) / faturamento12meses)
+            } else if (anexosimples == 4 && faturamento12meses > faixa3 && faturamento12meses < faixa4) {
+                AliquotaEfetiva = (((faturamento12meses * 0.140) - 39780) / faturamento12meses)
+            } else if (anexosimples == 4 && faturamento12meses > faixa4 && faturamento12meses < faixa5) {
+                AliquotaEfetiva = (((faturamento12meses * 0.220) - 183780) / faturamento12meses)
+            } else if (anexosimples == 4 && faturamento12meses > faixa5 && faturamento12meses < faixa6) {
+                (AliquotaEfetiva = "isento de iss")
+            } else if (anexosimples == 5 && faturamento12meses <= faixa1) {
+                AliquotaEfetiva = (((faturamento12meses * 0.155) - 0) / faturamento12meses)
+            } else if (anexosimples == 5 && faturamento12meses > faixa1 && faturamento12meses < faixa2) {
+                AliquotaEfetiva = (((faturamento12meses * 0.180) - 4500) / faturamento12meses)
+            } else if (anexosimples == 5 && faturamento12meses > faixa2 && faturamento12meses < faixa3) {
+                AliquotaEfetiva = (((faturamento12meses * 0.195) - 9900) / faturamento12meses)
+            } else if (anexosimples == 5 && faturamento12meses > faixa3 && faturamento12meses < faixa4) {
+                AliquotaEfetiva = (((faturamento12meses * 0.205) - 17100) / faturamento12meses)
+            } else if (anexosimples == 5 && faturamento12meses > faixa4 && faturamento12meses < faixa5) {
+                AliquotaEfetiva = (((faturamento12meses * 0.230) - 62100) / faturamento12meses)
+            } else if (anexosimples == 5 && faturamento12meses > faixa5 && faturamento12meses < faixa6) {
+                (AliquotaEfetiva = "isento de iss")
+            }
+            let formatado = AliquotaEfetiva.toFixed(2);
+            document.getElementById("formatado").innerHTML = formatado;
+            alert ('A sua aliquota é ' + formatado)
+        }
+    </script>
+
+</body>
+
+</html>
